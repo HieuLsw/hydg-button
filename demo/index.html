@@ -18,9 +18,12 @@
 
     <div class="vertical-section-container centered">
       <h3>Basic hydg-button Demo</h3>
-      <demo-snippet>
+      <demo-snippet style="text-align: center;">
         <template>
-          <hydg-button></hydg-button>
+          <hydg-button href="#" onclick="alert('clicked Default')" animated>Default</hydg-button>
+          <hydg-button href="#" onclick="alert('clicked Info')" animated info>Info</hydg-button>
+          <hydg-button href="#" onclick="alert('clicked Warning')" animated warning>Warning</hydg-button>
+          <hydg-button href="#" onclick="alert('clicked ERROR')" animated error>Error</hydg-button>
         </template>
       </demo-snippet>
     </div>

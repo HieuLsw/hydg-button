@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1800px" height="1024px" viewBox="0 0 1800 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #4990E2;">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>hydg-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="680" y="434.5" width="440" height="251" rx="4"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hydg-button">
+            <g id="base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill-opacity="0.3" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="button-warning" transform="translate(733.000000, 617.000000)">
+                <rect fill="#D0021B" x="0" y="0" width="334" height="35" rx="3"></rect>
+                <text id="WARNING" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" letter-spacing="-0.0500000007" fill="#FFFFFF">
+                    <tspan x="130.667188" y="23">WARNING</tspan>
+                </text>
+            </g>
+            <g id="button-caution" transform="translate(733.000000, 567.000000)">
+                <rect id="button-warning" fill="#F8E81C" x="0" y="0" width="334" height="35" rx="3"></rect>
+                <text id="Caution" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" letter-spacing="-0.0500000007" fill="#000000">
+                    <tspan x="139.288281" y="23">Caution</tspan>
+                </text>
+            </g>
+            <g id="button-info" transform="translate(733.000000, 517.000000)">
+                <rect id="button" fill="#4990E2" x="0" y="0" width="334" height="35" rx="3"></rect>
+                <text id="Info" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" letter-spacing="-0.0500000007" fill="#FFFFFF">
+                    <tspan x="152.982813" y="23">Info</tspan>
+                </text>
+            </g>
+            <g id="button" transform="translate(733.000000, 467.000000)">
+                <rect fill="#444444" x="0" y="0" width="334" height="35" rx="3"></rect>
+                <text id="Default" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" letter-spacing="-0.0500000007" fill="#FFFFFF">
+                    <tspan x="141.186719" y="23">Default</tspan>
+                </text>
+            </g>
+            <text id="Title" font-family="Roboto-Bold, Roboto" font-size="64" font-weight="bold" letter-spacing="-0.200000003" fill="#FFFFFF">
+                <tspan x="723.69375" y="104">hydg-button</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

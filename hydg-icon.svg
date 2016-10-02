@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1245px" height="572px" viewBox="0 0 1245 572" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="291.904762" cy="148.5" rx="291.904762" ry="111.375"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="583.809524" height="222.75" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="582.482684" cy="149.825893" rx="30.517316" ry="30.4955357"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-12" y="-12" width="85.034632" height="84.9910714">
+            <rect x="539.965368" y="107.330357" width="85.034632" height="84.9910714" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon" transform="translate(-6.000000, 0.000000)">
+            <text id="Title" font-family="Roboto-Black, Roboto" font-size="120" font-weight="700" letter-spacing="-0.375" fill="#000000">
+                <tspan x="0.21875" y="570">HYDROGEN ELEMENTS</tspan>
+            </text>
+            <g id="Hydrogen-Icon" transform="translate(300.000000, 0.000000)">
+                <ellipse id="Oval-2" fill="#4990E2" cx="291.904762" cy="148.5" rx="148.606061" ry="148.5"></ellipse>
+                <use id="Oval-3" stroke="#000000" mask="url(#mask-2)" stroke-width="12" xlink:href="#path-1"></use>
+                <path d="M440.510823,148.5 C440.510823,66.4857147 373.977623,0 291.904762,0 C209.831901,0 143.298701,66.4857147 143.298701,148.5 C143.298701,230.514285 440.510823,230.514285 440.510823,148.5 Z" id="Oval-2" fill="#4990E2"></path>
+                <g id="Oval-4">
+                    <use fill="#4990E2" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use stroke-opacity="0.3" stroke="#4A90E2" mask="url(#mask-4)" stroke-width="24" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,25 +1,131 @@
 <link rel="import" href="../polymer/polymer.html">
 
+<!--
+<img src="hydg-icon.svg" style="width: 100%; max-width: 300px; margin-left: calc(50% - 150px);">
+<img src="hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
+The Hydrogen Button is inspired by Apples new tvOS and fits perfectly to Google's Material Design.
+
+If you like my work, make sure you take a look at my other projects or follow me on Twitter
+
+<a href="https://twitter.com/KuhlTime"><img src="http://www.topeleven.com/wpctopeleven/plugins/te3home/img/social/tw-button.svg" style="width: 150px;"></a>
+
+## Examples:
+    <hydg-button href="https://google.com">Click Me</hydg-button>
+@element hydg-button
+@homepage http://kuhltime.github.io/hydg-button/
+@demo demo/index.html
+-->
+
 <dom-module id="hydg-button">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
-    <h2>Hello [[prop1]]</h2>
-  </template>
+    <template>
+      <style>
+        :host {
+          display: block;
+        }
+        a {
+          text-decoration: none;
+        }
+        #hydgButton {
+          width: 330px;
+          height: 35px;
+          background-color: #454545;
+          line-height: 35px;
+          text-align: center;
+          color: white;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        .info {
+          background-color: #4A90E2 !important;
+        }
+        .warning {
+          background-color: #F8E71C !important;
+          color: black !important;
+        }
+        .error {
+          background-color: #D0021B !important;
+          text-transform: uppercase;
+          color: white;
+        }
+        .animated {
+          transition: all .2s ease-in-out;
+        }
+        .animated:hover {
+          transform: scale(1.1);
+        }
+      </style>
+      <a href="{{href}}">
+        <div id="hydgButton">
+          <content></content>
+        </div>
+      </a>
+    </template>
 
   <script>
     Polymer({
 
       is: 'hydg-button',
 
+
+      // Properties
       properties: {
-        prop1: {
-          type: String,
-          value: 'hydg-button',
+
+        // Add animation to the button 👋
+        animated: {
+          type: Boolean,
+          value: false,
         },
+
+        // Just like a normal button set your href.
+        href: {
+          type: String,
+          value: "#",
+        },
+
+        // Info Button
+        info: {
+          type: Boolean,
+          value: false,
+        },
+
+        // Warning Button
+        warning: {
+          type: Boolean,
+          value: false,
+        },
+
+        // Error Button
+        error: {
+          type: Boolean,
+          value: false,
+        },
+
+        // When the user should not be able to press the button add the disabled attribute to the component.
+        disabled: {
+          type: Boolean,
+          value: false,
+        },
+      },
+
+
+      // Functions
+      ready: function() {
+        if (this.animated === true) {
+          this.$.hydgButton.className += ' animated';
+        }
+        if (this.error === true) {
+          this.$.hydgButton.className += ' error';
+        }
+        if (this.warning === true) {
+          this.$.hydgButton.className += ' warning';
+        }
+        if (this.info === true) {
+          this.$.hydgButton.className += ' info';
+        }
       },
 
     });
