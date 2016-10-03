@@ -1,14 +1,20 @@
 {
   "name": "hydg-button",
-  "description": "A Apple TV like Button.",
+  "description": "A Apple TV like button component.",
   "main": "hydg-button.html",
+  "keyword": "web-components",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-ripple": "*"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "paper-toast": "^1.3.0"
+  },
+  "resolutions": {
+    "paper-ripple": "^1.0.0"
   }
 }

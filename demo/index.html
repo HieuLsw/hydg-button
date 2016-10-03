@@ -8,23 +8,45 @@
 
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-toast/paper-toast.html">
 
     <link rel="import" href="../hydg-button.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
+      #toast {
+        text-align: left;
+      }
+      demo-snippet {
+        text-align: left;
+      }
     </style>
   </head>
   <body>
 
     <div class="vertical-section-container centered">
-      <h3>Basic hydg-button Demo</h3>
+      <h3>hydg-button available types</h3>
       <demo-snippet style="text-align: center;">
         <template>
-          <hydg-button href="#" onclick="alert('clicked Default')" animated>Default</hydg-button>
-          <hydg-button href="#" onclick="alert('clicked Info')" animated info>Info</hydg-button>
-          <hydg-button href="#" onclick="alert('clicked Warning')" animated warning>Warning</hydg-button>
-          <hydg-button href="#" onclick="alert('clicked ERROR')" animated error>Error</hydg-button>
+          <hydg-button>Default</hydg-button>
+          <hydg-button info>Info</hydg-button>
+          <hydg-button warning>Warning</hydg-button>
+          <hydg-button error>Error</hydg-button>
         </template>
+      </demo-snippet>
+
+      <h3>On click open a paper-toast for 3 seconds</h3>
+      <demo-snippet style="text-align: center;">
+        <template>
+            <hydg-button href="#" onclick="document.getElementById('toast').show({text: 'pressed Default', duration: 3000})" default>Default</hydg-button>
+            <paper-toast id="toast"></paper-toast>
+          </template>
+      </demo-snippet>
+
+      <h3>Disable <code>animated</code> and <code>ripple</code></h3>
+      <demo-snippet style="text-align: center;">
+        <template>
+            <hydg-button href="#" animated ripple info>Info</hydg-button>
+          </template>
       </demo-snippet>
     </div>
 

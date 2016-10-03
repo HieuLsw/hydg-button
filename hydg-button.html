@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
 
 <!--
 <img src="hydg-icon.svg" style="width: 100%; max-width: 300px; margin-left: calc(50% - 150px);">
@@ -59,8 +60,9 @@ If you like my work, make sure you take a look at my other projects or follow me
         }
       </style>
       <a href="{{href}}">
-        <div id="hydgButton">
+        <div id="hydgButton" class$="{{_getClass(animated, info, warning, error, disabled)}}">
           <content></content>
+          <paper-ripple if="{{ripple}}"></paper-ripple>
         </div>
       </a>
     </template>
@@ -77,13 +79,19 @@ If you like my work, make sure you take a look at my other projects or follow me
         // Add animation to the button 👋
         animated: {
           type: Boolean,
-          value: false,
+          value: true,
         },
 
         // Just like a normal button set your href.
         href: {
           type: String,
           value: "#",
+        },
+
+        // Disables the ripple when the button is pressed.
+        ripple: {
+          type: Boolean,
+          value: true,
         },
 
         // Info Button
@@ -114,18 +122,18 @@ If you like my work, make sure you take a look at my other projects or follow me
 
       // Functions
       ready: function() {
-        if (this.animated === true) {
-          this.$.hydgButton.className += ' animated';
-        }
-        if (this.error === true) {
-          this.$.hydgButton.className += ' error';
-        }
-        if (this.warning === true) {
-          this.$.hydgButton.className += ' warning';
-        }
-        if (this.info === true) {
-          this.$.hydgButton.className += ' info';
-        }
+
+      },
+
+      // To detect property changes and change the classes accordingly
+      _getClass: function(animated, info, warning, error, disabled){
+        var classes = "";
+        classes += animated ? ' animated' : '';
+        classes += info ? ' info' : '';
+        classes += warning ? ' warning' : '';
+        classes += error ? ' error' : '';
+        classes += disabled ? ' disabled' : '';
+        return classes;
       },
 
     });
