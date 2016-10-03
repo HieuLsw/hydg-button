@@ -1,7 +1,5 @@
 # &lt;hydg-button&gt;
 
-<img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-icon.svg" style="width: 100%; max-width: 300px; margin-left: calc(50% - 150px);">
-
 <img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
 
 The hydg-button element is part of a whole collection of styled web components and can be used for everything that you want. This element is inspired by Apples tvOS and for me perfectly fits to Googles Material Design.
