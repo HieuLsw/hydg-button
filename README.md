@@ -1,38 +1,36 @@
-# \<hydg-button\>
+# &lt;hydg-button&gt;
 
-A Apple TV like Button.
+<img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-icon.svg" style="width: 100%; max-width: 300px; margin-left: calc(50% - 150px);">
 
-## Install the Polymer-CLI
+<img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+The hydg-button element is part of a whole collection of styled web components and can be used for everything that you want. This element is inspired by Apples tvOS and for me perfectly fits to Googles Material Design.
 
-## Viewing Your Application
 
-```
-$ polymer serve
-```
+[component page](#)
 
-## Building Your Application
+## Getting started
 
-```
-$ polymer build
-```
+To start using any of my elements please make sure you havethose things installed:
 
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
+- [NodeJS](https://nodejs.org/)
+- [Bower](https://bower.io/)
 
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
+To install this element run:
 
-```
-$ polymer serve build/bundled
+```shell
+$ bower i -S hydg-button
 ```
 
-## Running Tests
+The last thing for you to do is to import this element into your project:
 
-```
-$ polymer test
+```html
+<link rel="import" href="bower_components/hydg-button/hydg-button.html">
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+To see what this element is capable of head towards the [documentation](#).
+
+## Disclaimer
+
+Because this is my first element I created please don't expect to much.
+When there are any errors or improvements I could make please let me know.
