@@ -2,19 +2,19 @@
 
 <img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
 
-The hydg-button element will soon be part of a whole collection of styled web components and can be used for everything you want. This element is inspired by Apples tvOS and for me perfectly fits Googles Material Design.
+The hydg-button element will soon be part of a whole collection of styled web components and can be used for everything you want. This element is inspired by Apples tvOS and perfectly fits Googles Material Design.
 
 
 [component page](https://kuhltime.github.io/hydg-button/components/hydg-button/)
 
 ## Getting started
 
-To start using any of my elements please make sure you have those things installed:
+To start using this element please make sure you have those things installed:
 
 - [NodeJS](https://nodejs.org/)
 - [Bower](https://bower.io/)
 
-To install this element run:
+To install the element run:
 
 ```shell
 $ bower i -S hydg-button
