@@ -2,7 +2,7 @@
 
 <img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
 
-The hydg-button element will soon be part of a whole collection of styled web components and can be used for everything that you want. This element is inspired by Apples tvOS and for me perfectly fits Googles Material Design.
+The hydg-button element will soon be part of a whole collection of styled web components and can be used for everything you want. This element is inspired by Apples tvOS and for me perfectly fits Googles Material Design.
 
 
 [component page](https://kuhltime.github.io/hydg-button/components/hydg-button/)
