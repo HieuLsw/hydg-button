@@ -5,7 +5,7 @@
 The hydg-button element is part of a whole collection of styled web components and can be used for everything that you want. This element is inspired by Apples tvOS and for me perfectly fits to Googles Material Design.
 
 
-[component page](#)
+[component page](https://github.com/KuhlTime/hydg-button/)
 
 ## Getting started
 
@@ -26,7 +26,7 @@ The last thing for you to do is to import this element into your project:
 <link rel="import" href="bower_components/hydg-button/hydg-button.html">
 ```
 
-To see what this element is capable of head towards the [documentation](#).
+To see what this element is capable of head towards the [documentation](https://github.com/KuhlTime/hydg-button/).
 
 ## Disclaimer
 
