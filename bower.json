@@ -1,6 +1,6 @@
 {
   "name": "hydg-button",
-  "homepage": "https://github.com/KuhlTime/hydg-button",
+  "homepage": "https://kuhltime.github.io/hydg-button/components/hydg-button/",
   "description": "A Apple TV like button component.",
   "main": "hydg-button.html",
   "license": "http://polymer.github.io/LICENSE.txt",
