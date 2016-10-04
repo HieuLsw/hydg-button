@@ -60,9 +60,9 @@ If you like my work, make sure you take a look at my other projects or follow me
         }
       </style>
       <a href="{{href}}">
-        <div id="hydgButton" class$="{{_getClass(animated, info, warning, error, disabled)}}">
+        <div id="hydgButton" class$="{{_getClass(info, warning, error)}}">
           <content></content>
-          <paper-ripple if="{{ripple}}"></paper-ripple>
+          <paper-ripple></paper-ripple>
         </div>
       </a>
     </template>
@@ -76,22 +76,10 @@ If you like my work, make sure you take a look at my other projects or follow me
       // Properties
       properties: {
 
-        // Add animation to the button 👋
-        animated: {
-          type: Boolean,
-          value: true,
-        },
-
         // Just like a normal button set your href.
         href: {
           type: String,
           value: "#",
-        },
-
-        // Disables the ripple when the button is pressed.
-        ripple: {
-          type: Boolean,
-          value: true,
         },
 
         // Info Button
@@ -111,12 +99,6 @@ If you like my work, make sure you take a look at my other projects or follow me
           type: Boolean,
           value: false,
         },
-
-        // When the user should not be able to press the button add the disabled attribute to the component.
-        disabled: {
-          type: Boolean,
-          value: false,
-        },
       },
 
 
@@ -126,13 +108,11 @@ If you like my work, make sure you take a look at my other projects or follow me
       },
 
       // To detect property changes and change the classes accordingly
-      _getClass: function(animated, info, warning, error, disabled){
-        var classes = "";
-        classes += animated ? ' animated' : '';
+      _getClass: function(info, warning, error){
+        var classes = "animated";
         classes += info ? ' info' : '';
         classes += warning ? ' warning' : '';
         classes += error ? ' error' : '';
-        classes += disabled ? ' disabled' : '';
         return classes;
       },
 
