@@ -23,7 +23,7 @@
     "button",
     "tvOS",
     "material-design",
-    "apple",
+    "apple"
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
