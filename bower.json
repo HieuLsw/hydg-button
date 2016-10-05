@@ -1,6 +1,6 @@
 {
   "name": "hydg-button",
-  "homepage": "https://kuhltime.github.io/hydg-button/components/hydg-button/",
+  "homepage": "https://github.com/KuhlTime/hydg-button/",
   "description": "A Apple TV like button component.",
   "main": "hydg-button.html",
   "license": "http://polymer.github.io/LICENSE.txt",
@@ -15,6 +15,7 @@
     "André Kuhlmann (https://twitter.com/KuhlTime/)"
   ],
   "keywords": [
+    "web-component",
     "web-components",
     "polymer",
     "hydrogen",
