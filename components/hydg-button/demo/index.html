@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>hydg-button demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-toast/paper-toast.html">
+
+    <link rel="import" href="../hydg-button.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      #toast {
+        text-align: left;
+      }
+      demo-snippet {
+        text-align: left;
+      }
+      hydg-button {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>hydg-button available types</h3>
+      <demo-snippet>
+        <template>
+          <hydg-button animate ripple>Default</hydg-button>
+          <hydg-button animate ripple info>Info</hydg-button>
+          <hydg-button animate ripple warning>Warning</hydg-button>
+          <hydg-button animate ripple error>Error</hydg-button>
+        </template>
+      </demo-snippet>
+
+      <h3>On click open a paper-toast for 3 seconds</h3>
+      <demo-snippet>
+        <template>
+            <hydg-button onclick="document.getElementById('toast').show({text: 'Web Components are awesome 🎉', duration: 3000})" animate ripple>Display Toast</hydg-button>
+            <paper-toast id="toast"></paper-toast>
+          </template>
+      </demo-snippet>
+
+      <h3>Remove <i>animate</i> and <i>ripple</i> to disable all animations</h3>
+      <demo-snippet>
+        <template>
+            <hydg-button info>I'm not animated</hydg-button>
+            <paper-toast id="toast"></paper-toast>
+          </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>

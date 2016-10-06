@@ -1,0 +1,133 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+
+<!--
+<img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-icon.svg" style="width: 100%; max-width: 300px; margin-left: calc(50% - 150px);">
+<img src="https://cdn.rawgit.com/KuhlTime/hydg-button/master/hydg-button.svg" style="border-radius: 4px; width: 100%; max-width: 768px; margin-top: 30px; margin-bottom: 20px;">
+The Hydrogen Button is inspired by Apples new tvOS and fits perfectly to Google's Material Design.
+
+If you like my work, make sure you take a look at my other projects or follow me on Twitter
+
+<a href="https://twitter.com/KuhlTime"><img src="http://www.topeleven.com/wpctopeleven/plugins/te3home/img/social/tw-button.svg" style="width: 150px;"></a>
+
+## Examples:
+    <hydg-button href="https://google.com">Click Me</hydg-button>
+@element hydg-button
+@homepage http://kuhltime.github.io/hydg-button/
+@demo demo/index.html
+-->
+
+<dom-module id="hydg-button">
+    <template>
+      <style>
+        :host {
+          display: block;
+          width: 330px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          color: white;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          border-radius: 3px;
+        }
+        a {
+          text-decoration: none;
+        }
+        #hydgButton {
+          border-radius: 3px;
+          background-color: inherit;
+          cursor: pointer;
+          background-color: #454545;
+        }
+        .info {
+          background-color: #4A90E2 !important;
+        }
+        .warning {
+          background-color: #F8E71C !important;
+          color: black !important;
+        }
+        .error {
+          background-color: #D0021B !important;
+          text-transform: uppercase;
+          color: white;
+        }
+        .animated {
+          transition: all .2s ease-in-out;
+        }
+        .animated:hover {
+          transform: scale(1.1);
+        }
+      </style>
+      <a href="{{href}}">
+        <div id="hydgButton" class$="{{_getClass(animate, info, warning, error)}}">
+          <content></content>
+          <template is="dom-if" if="{{ripple}}">
+            <paper-ripple></paper-ripple>
+          </template>
+        </div>
+      </a>
+    </template>
+
+  <script>
+    Polymer({
+
+      is: 'hydg-button',
+
+
+      // Properties
+      properties: {
+
+        // The link where the button is pointing at.
+        href: String,
+
+        // The info button has a blue background-color.
+        info: {
+          type: Boolean,
+          value: false,
+        },
+
+        // The warning button has a yellow background-color and black text color.
+        warning: {
+          type: Boolean,
+          value: false,
+        },
+
+        // The error propertie displays the button with a red background-color and capitalized text.
+        error: {
+          type: Boolean,
+          value: false,
+        },
+
+        // Define rather there should be an scaling animation or not, by defualt the animattion is enabled
+        animate: {
+          type: Boolean,
+          value: false,
+        },
+
+        // To activate the ripple effect when the button gets pressed add an ripple attribute to the element. The animation of the ripple effect comes from the original paper-ripple element created by the [Polymer]() team at Google.
+        ripple: {
+          type: Boolean,
+          value: false,
+        },
+      },
+
+
+      // Functions
+      ready: function() {
+
+      },
+
+      // To detect property changes and change the classes accordingly
+      _getClass: function(animate, info, warning, error){
+        var classes = '';
+        classes += animate ? ' animated' : '';
+        classes += info ? ' info' : '';
+        classes += warning ? ' warning' : '';
+        classes += error ? ' error' : '';
+        return classes;
+      },
+
+    });
+  </script>
+</dom-module>
