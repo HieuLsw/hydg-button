@@ -22,23 +22,23 @@ If you like my work, make sure you take a look at my other projects or follow me
       <style>
         :host {
           display: block;
+          width: 330px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          color: white;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          border-radius: 3px;
         }
         a {
           text-decoration: none;
         }
         #hydgButton {
-          width: 330px;
-          height: 35px;
-          background-color: #454545;
-          line-height: 35px;
-          text-align: center;
-          color: white;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 8px;
-          margin-bottom: 8px;
           border-radius: 3px;
+          background-color: inherit;
           cursor: pointer;
+          background-color: #454545;
         }
         .info {
           background-color: #4A90E2 !important;
@@ -60,9 +60,11 @@ If you like my work, make sure you take a look at my other projects or follow me
         }
       </style>
       <a href="{{href}}">
-        <div id="hydgButton" class$="{{_getClass(info, warning, error)}}">
+        <div id="hydgButton" class$="{{_getClass(animate, info, warning, error)}}">
           <content></content>
-          <paper-ripple></paper-ripple>
+          <template is="dom-if" if="{{ripple}}">
+            <paper-ripple></paper-ripple>
+          </template>
         </div>
       </a>
     </template>
@@ -76,26 +78,35 @@ If you like my work, make sure you take a look at my other projects or follow me
       // Properties
       properties: {
 
-        // Just like a normal button set your href.
-        href: {
-          type: String,
-          value: "#",
-        },
+        // The link where the button is pointing at.
+        href: String,
 
-        // Info Button
+        // The info button has a blue background-color.
         info: {
           type: Boolean,
           value: false,
         },
 
-        // Warning Button
+        // The warning button has a yellow background-color and black text color.
         warning: {
           type: Boolean,
           value: false,
         },
 
-        // Error Button
+        // The error propertie displays the button with a red background-color and capitalized text.
         error: {
+          type: Boolean,
+          value: false,
+        },
+
+        // Define rather there should be an scaling animation or not, by defualt the animattion is enabled
+        animate: {
+          type: Boolean,
+          value: false,
+        },
+
+        // To activate the ripple effect when the button gets pressed add an ripple attribute to the element. The animation of the ripple effect comes from the original paper-ripple element created by the [Polymer]() team at Google.
+        ripple: {
           type: Boolean,
           value: false,
         },
@@ -108,8 +119,9 @@ If you like my work, make sure you take a look at my other projects or follow me
       },
 
       // To detect property changes and change the classes accordingly
-      _getClass: function(info, warning, error){
-        var classes = "animated";
+      _getClass: function(animate, info, warning, error){
+        var classes = '';
+        classes += animate ? ' animated' : '';
         classes += info ? ' info' : '';
         classes += warning ? ' warning' : '';
         classes += error ? ' error' : '';
